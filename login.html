@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Sistema de Pontos Turísticos</title>
+  <link rel="stylesheet" href="estilos/Login_style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login do Administrador</h1>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Usuário</label>
+        <input type="text" id="username" placeholder="Digite seu usuário" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" placeholder="Digite sua senha" required>
+      </div>
+      <button type="submit">Entrar</button>
+      <p id="error-msg"></p>
+    </form>
+  </div>
+
+  <script src="scripts/script_Login.js"></script>
+</body>
+</html>

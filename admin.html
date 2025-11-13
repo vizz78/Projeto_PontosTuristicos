@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Administrativo - Pontos Turísticos</title>
+  <link rel="stylesheet" href="estilos/Admin_Style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Sistema RS</h2>
+    <nav>
+      <ul>
+        <li><a href="#" id="menuCadastrar" class="active">Cadastrar Ponto</a></li>
+        <li><a href="#" id="menuListar">Listar Pontos</a></li>
+        <li><a href="#" id="logout">Sair</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <!-- Seção de Cadastro -->
+    <section id="cadastrar" class="active">
+      <h1>Cadastrar Ponto Turístico</h1>
+      <form id="formPonto">
+        <input type="text" id="titulo" placeholder="Título do ponto turístico" required>
+        <textarea id="descricao" placeholder="Descrição" required></textarea>
+        <input type="file" id="imagem" accept="image/*" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+
+    <!-- Seção de Listagem -->
+    <section id="listar">
+      <h1>Lista de Pontos Turísticos</h1>
+      <div id="listaPontos" class="lista"></div>
+    </section>
+  </main>
+
+  <script src="scripts/Script_Admin.js"></script>
+</body>
+</html>

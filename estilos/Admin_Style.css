@@ -1,0 +1,357 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* ===== MENU LATERAL ===== */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(180deg, #006B3F, #C8102E);
+  color: #FFD700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px 0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #FFD700;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.main-content {
+  flex: 1;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content h1 {
+  color: #C8102E;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* ===== FORMULÁRIO ===== */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #006B3F;
+}
+
+form input[type="text"],
+form textarea,
+form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+
+form button {
+  background-color: #006B3F;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #C8102E;
+}
+
+/* ======== LISTAGEM ======== */
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ======== CARD ======== */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 3px solid #006B3F;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: #006B3F;
+  margin: 0.8rem 1rem 0.4rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0 1rem 1rem;
+}
+
+/* ======== BOTÕES ======== */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.8rem 1rem 1rem;
+}
+
+.actions button {
+  flex: 1;
+  padding: 0.5rem 0.6rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.actions .edit {
+  background-color: #FFD700;
+  color: #333;
+}
+
+.actions .edit:hover {
+  background-color: #e6c200;
+}
+
+.actions .delete {
+  background-color: #C8102E;
+  color: #fff;
+}
+
+.actions .delete:hover {
+  background-color: #a60d25;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 1200px) {
+  .lista {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .lista {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .lista {
+    grid-template-columns: 1fr;
+  }
+}
+/* ======== SEÇÕES ======== */
+section {
+  display: none;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section.active {
+  display: block;
+}
+
+/* ======== CADASTRAR ======== */
+#cadastrar {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#cadastrar h1 {
+  color: #006B3F;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#formPonto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#formPonto input,
+#formPonto textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#formPonto button {
+  background-color: #C8102E;
+  color: #fff;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+#formPonto button:hover {
+  background-color: #a60d25;
+}
+
+/* ======== LISTAR ======== */
+#listar {
+  margin-top: 2rem;
+}
+
+#listar h1 {
+  color: #006B3F;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ======== CARDS ======== */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 3px solid #006B3F;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: #006B3F;
+  margin: 0.8rem 1rem 0.4rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0 1rem 1rem;
+}
+
+/* ======== BOTÕES ======== */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.8rem 1rem 1rem;
+}
+
+.actions button {
+  flex: 1;
+  padding: 0.5rem 0.6rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.actions .edit {
+  background-color: #FFD700;
+  color: #333;
+}
+
+.actions .edit:hover {
+  background-color: #e6c200;
+}
+
+.actions .delete {
+  background-color: #C8102E;
+  color: #fff;
+}
+
+.actions .delete:hover {
+  background-color: #a60d25;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 1200px) {
+  .lista {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .lista {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .lista {
+    grid-template-columns: 1fr;
+  }
+}
+

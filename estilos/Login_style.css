@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #006B3F, #C8102E);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  width: 320px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: #006B3F;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 4px #FFD700;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #C8102E;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #a50e24;
+}
+
+#error-msg {
+  color: #C8102E;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Detalhe decorativo inspirado na bandeira */
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, #006B3F, #FFD700, #C8102E);
+  border-radius: 12px 12px 0 0;
+}
+
